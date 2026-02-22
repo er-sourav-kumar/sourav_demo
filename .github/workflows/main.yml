@@ -1,0 +1,7 @@
+build_job:
+    script:
+       -echo "build pass"
+
+test:
+    script:
+      -echo "test pass"
