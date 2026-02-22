@@ -1,7 +1,14 @@
-build_job:
-    script:
-       -echo "build pass"
+name: Python Testing
+on: [push, pull_request]
 
-test:
-    script:
-      -echo "test pass"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run tests
+        run: pytest
