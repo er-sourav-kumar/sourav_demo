@@ -1,3 +1,12 @@
-build:
-script:
--echo "first step"
+name: Hello World
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greetings
+      run: echo "hello"
+
+
