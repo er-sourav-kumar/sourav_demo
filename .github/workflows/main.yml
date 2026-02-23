@@ -6,7 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Greetings
-      run: echo "hello"
+      - run: echo "hello"
 
 
